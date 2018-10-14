@@ -4,101 +4,109 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="@drawable/biz_plugin_weather_shenzhen_bg"
+    android:orientation="vertical"
     tools:context=".MainActivity">
     <!-- 最上面的框-->
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:background="#FFB6C1">
+        android:background="#FFB6C1"
+        android:orientation="horizontal">
         <!--第一个小房子-->
         <ImageButton
+            android:id="@+id/first_home"
             android:layout_width="0dp"
-            android:layout_weight="1"
             android:layout_height="45dp"
+            android:layout_weight="1"
             android:background="#FFB6C1"
-            android:src="@drawable/title_city"/>
+            android:src="@drawable/title_city" />
         <!--城市-->
         <TextView
-            android:layout_width="0dp"
-            android:layout_weight="2"
-            android:layout_height="45dp"
             android:id="@+id/first_name"
-            android:textSize="25sp"
-            android:textColor="#FFFFFF"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
             android:layout_gravity="center"
-            android:text="北京天气"/>
+            android:layout_weight="2"
+            android:text="北京天气"
+            android:textColor="#FFFFFF"
+            android:textSize="25sp" />
         <!--中间留出间距-->
         <TextView
             android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="45dp" />
+            android:layout_height="45dp"
+            android:layout_weight="1" />
         <!--以下三个按钮为导航栏最右边三个-->
         <ImageButton
+            android:id="@+id/first_location"
             android:layout_width="0dp"
-            android:layout_weight="1"
             android:layout_height="45dp"
-            android:src="@drawable/base_action_bar_action_city"
-            android:background="#FFB6C1"/>
+            android:layout_weight="1"
+            android:background="#FFB6C1"
+            android:src="@drawable/base_action_bar_action_city" />
+
         <ImageButton
+            android:id="@+id/first_link"
             android:layout_width="0dp"
-            android:layout_weight="1"
             android:layout_height="45dp"
-            android:src="@drawable/title_share"
-            android:background="#FFB6C1"/>
+            android:layout_weight="1"
+            android:background="#FFB6C1"
+            android:src="@drawable/title_share" />
+
         <ImageButton
+            android:id="@+id/first_update"
             android:layout_width="0dp"
-            android:layout_weight="1"
             android:layout_height="45dp"
-            android:src="@drawable/title_update"
-            android:background="#FFB6C1"/>
+            android:layout_weight="1"
+            android:background="#FFB6C1"
+            android:src="@drawable/title_update" />
     </LinearLayout>
-<!--接下来为第二层-->
+    <!--接下来为第二层-->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <!--第二层的左半部分-->
         <LinearLayout
             android:layout_width="0dp"
-            android:layout_weight="1"
+            android:layout_height="wrap_content"
             android:layout_marginLeft="30dp"
             android:layout_marginTop="30dp"
-            android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:orientation="vertical">
+
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="#FFFFFF"
-                android:textSize="50sp"
                 android:id="@+id/first_city"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:text="北京"
-                />
-            <TextView
-                android:layout_marginTop="20dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/first_time"
-                android:text="今天18：25发布"
-                android:textSize="22sp"
-                android:textColor="#FFFFFF"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/first_water"
-                android:layout_marginTop="10dp"
                 android:textColor="#FFFFFF"
-                android:textSize="22sp"
-                android:text="湿度：57%"/>
+                android:textSize="50sp" />
+
+            <TextView
+                android:id="@+id/first_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="今天18：25发布"
+                android:textColor="#FFFFFF"
+                android:textSize="22sp" />
+
+            <TextView
+                android:id="@+id/first_water"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="湿度：57%"
+                android:textColor="#FFFFFF"
+                android:textSize="22sp" />
         </LinearLayout>
         <!--第二层右半部分-->
         <LinearLayout
             android:layout_width="0dp"
+            android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
-            android:orientation="vertical"
             android:layout_weight="1"
-            android:layout_height="wrap_content">
+            android:orientation="vertical">
             <!--小人头像和左边的字体属于一个线性布局-->
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -109,93 +117,100 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
+
                     <TextView
+                        android:id="@+id/first_pm"
                         android:layout_width="wrap_content"
                         android:layout_height="0dp"
                         android:layout_weight="2"
-                        android:textSize="30sp"
+                        android:text="PM2.5"
                         android:textColor="#FFFFFF"
-                        android:id="@+id/first_pm"
-                        android:text="PM2.5"/>
+                        android:textSize="30sp" />
+
                     <TextView
+                        android:id="@+id/first_num"
                         android:layout_width="wrap_content"
                         android:layout_height="0dp"
                         android:layout_weight="3"
-                        android:id="@+id/first_num"
-                        android:textSize="43sp"
+                        android:text="220"
                         android:textColor="#FFFFFF"
-                        android:text="220"/>
+                        android:textSize="43sp" />
 
                 </LinearLayout>
                 <!--小人头像-->
                 <ImageView
+                    android:id="@+id/first_pic"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/biz_plugin_weather_0_50"/>
+                    android:src="@drawable/biz_plugin_weather_0_50" />
 
             </LinearLayout>
             <!--右半部分下方污染程度字体-->
             <TextView
+                android:id="@+id/first_pm_res"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:textSize="30sp"
-                android:textColor="#ffffff"
                 android:gravity="center"
                 android:text="重度污染"
-                />
+                android:textColor="#ffffff"
+                android:textSize="30sp" />
 
         </LinearLayout>
     </LinearLayout>
     <!--第三部分：天气-->
     <LinearLayout
         android:layout_width="wrap_content"
-        android:orientation="horizontal"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
         <ImageView
-            android:layout_width="0dp"
-            android:layout_weight="4"
-            android:layout_height="wrap_content"
             android:id="@+id/first_weather"
-            android:src="@drawable/biz_plugin_weather_qing"/>
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:src="@drawable/biz_plugin_weather_qing" />
         <!--第三部分的右半部分-->
         <LinearLayout
-            android:layout_marginTop="40dp"
             android:layout_width="0dp"
-            android:layout_weight="5"
             android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:layout_weight="5"
             android:orientation="vertical">
+
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:id="@+id/first_week"
-                android:textColor="#ffffff"
-                android:textSize="24sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:text="今天 星期三"
-                />
+                android:textColor="#ffffff"
+                android:textSize="24sp" />
+
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
                 android:id="@+id/first_temp"
-                android:textSize="30sp"
-                android:textColor="#ffffff"
-                android:text="-2°C~7°C"/>
-            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
+                android:text="-2°C~7°C"
+                android:textColor="#ffffff"
+                android:textSize="30sp" />
+
+            <TextView
                 android:id="@+id/first_wea"
-                android:textColor="#ffffff"
-                android:textSize="25sp"
-                android:text="多云转晴"/>
-            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/first_wind"
                 android:layout_marginTop="10dp"
-                android:textSize="25sp"
+                android:text="多云转晴"
                 android:textColor="#ffffff"
-                android:text="微风"/>
+                android:textSize="25sp" />
+
+            <TextView
+                android:id="@+id/first_wind"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="微风"
+                android:textColor="#ffffff"
+                android:textSize="25sp" />
 
         </LinearLayout>
 
