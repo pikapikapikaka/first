@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <TextView
+        android:id="@+id/down_day"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textSize="25dp"
+        android:text="周五"/>
+    <ImageView
+        android:layout_gravity="center"
+        android:id="@+id/down_img"
+        android:layout_width="100sp"
+        android:layout_height="100sp"
+        android:src="@drawable/biz_plugin_weather_qing"/>
+    <TextView
+        android:id="@+id/down_tem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:layout_gravity="center"
+        android:text="5C"/>
+    <TextView
+        android:layout_gravity="center"
+        android:id="@+id/down_wind"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:text="没风"/>
+
+
+</LinearLayout>

@@ -8,59 +8,71 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
     <!-- 最上面的框-->
-    <LinearLayout
-        android:layout_width="wrap_content"
+    <RelativeLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#FFB6C1"
         android:orientation="horizontal">
         <!--第一个小房子-->
         <ImageButton
             android:id="@+id/first_home"
-            android:layout_width="0dp"
+            android:layout_width="45dp"
             android:layout_height="45dp"
-            android:layout_weight="1"
             android:background="#FFB6C1"
             android:src="@drawable/title_city" />
+        <ProgressBar
+            android:id="@+id/title_update_progress"
+            android:layout_width="45dip"
+            android:layout_height="45dip"/>
         <!--城市-->
         <TextView
+            android:layout_toRightOf="@id/title_update_progress"
             android:id="@+id/first_name"
-            android:layout_width="0dp"
+            android:layout_width="100sp"
             android:layout_height="45dp"
             android:layout_gravity="center"
-            android:layout_weight="2"
             android:text="北京天气"
             android:textColor="#FFFFFF"
-            android:textSize="25sp" />
+            android:textSize="22sp" />
         <!--中间留出间距-->
         <TextView
-            android:layout_width="0dp"
+            android:layout_toRightOf="@+id/first_name"
+            android:layout_width="100dp"
             android:layout_height="45dp"
-            android:layout_weight="1" />
+            />
         <!--以下三个按钮为导航栏最右边三个-->
         <ImageButton
+            android:layout_alignParentRight="true"
+            android:id="@+id/first_update"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:background="#FFB6C1"
+            android:src="@drawable/title_update" />
+        <ProgressBar
+            android:id="@+id/title_update_progress2"
+            android:layout_width="45dip"
+            android:layout_height="45dip"
+            android:layout_alignParentRight="true"/>
+        <ImageButton
+            android:layout_toLeftOf="@id/title_update_progress2"
             android:id="@+id/first_location"
-            android:layout_width="0dp"
+            android:layout_width="45dp"
             android:layout_height="45dp"
             android:layout_weight="1"
             android:background="#FFB6C1"
             android:src="@drawable/base_action_bar_action_city" />
 
         <ImageButton
+            android:layout_toLeftOf="@id/first_location"
             android:id="@+id/first_link"
-            android:layout_width="0dp"
+            android:layout_width="45dp"
             android:layout_height="45dp"
             android:layout_weight="1"
             android:background="#FFB6C1"
             android:src="@drawable/title_share" />
 
-        <ImageButton
-            android:id="@+id/first_update"
-            android:layout_width="0dp"
-            android:layout_height="45dp"
-            android:layout_weight="1"
-            android:background="#FFB6C1"
-            android:src="@drawable/title_update" />
-    </LinearLayout>
+
+    </RelativeLayout>
     <!--接下来为第二层-->
     <LinearLayout
         android:layout_width="match_parent"
@@ -160,7 +172,7 @@
     <!--第三部分：天气-->
     <LinearLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="200sp"
         android:orientation="horizontal">
 
         <ImageView
@@ -173,7 +185,7 @@
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="20dp"
             android:layout_weight="5"
             android:orientation="vertical">
 
@@ -215,5 +227,10 @@
         </LinearLayout>
 
     </LinearLayout>
+    <!--最后一行-->
+    <android.support.v4.view.ViewPager
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ff0000"></android.support.v4.view.ViewPager>
 
 </LinearLayout>

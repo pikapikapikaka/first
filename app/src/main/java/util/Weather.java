@@ -17,7 +17,7 @@ public class Weather {
     private String first_wind;
 
     public String getFirst_name() {
-        return first_name;
+        return first_name+"天气";
     }
 
     public void setFirst_name(String first_name) {
@@ -33,7 +33,7 @@ public class Weather {
     }
 
     public String getFirst_time() {
-        return first_time;
+        return "今天"+first_time+"发布";
     }
 
     public void setFirst_time(String first_time) {
@@ -41,7 +41,7 @@ public class Weather {
     }
 
     public String getFirst_water() {
-        return first_water;
+        return "湿度："+first_water;
     }
 
     public void setFirst_water(String first_water) {
@@ -81,7 +81,7 @@ public class Weather {
     }
 
     public String getFirst_week() {
-        return first_week;
+        return "今天是"+first_week;
     }
 
     public void setFirst_week(String first_week) {
